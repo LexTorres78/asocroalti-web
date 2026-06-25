@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ASOCROALTI — Campesinos Criollos de la Altillanura</title>
+  <meta name="description" content="Asociación Gremial de Campesinos Criollos Altillanura — ASOCROALTI. Puerto López, Meta. NIT 901.526.395-0.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap topbar">
+    <a class="logo" href="index.html" aria-label="ASOCROALTI inicio">
+      <img src="assets/img/logo-asocroalti.png" alt="ASOCROALTI">
+      <div class="logo-name">ASOCROALTI
+        <span>Campesinos Criollos Altillanura</span>
+      </div>
+    </a>
+    <ul class="nav" id="nav">
+      <li class="active"><a href="index.html">Inicio</a></li>
+      <li><a href="#territorio">Territorio</a></li>
+      <li><a href="#galeria">Galería</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="documentos.html">Documentos ESAL</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+    <div class="head-actions">
+      <a class="btn btn-green" href="contacto.html">Contáctanos</a>
+      <button class="burger" id="burger" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════════
+     HERO — Ilustración Altillanura IZQ + texto DER
+     ═══════════════════════════════════════════ -->
+<section class="hero" id="inicio">
+
+  <!-- ILUSTRACIÓN SVG DE LA SABANA LLANERA -->
+  <div class="hero-illustration" aria-hidden="true">
+    <svg viewBox="0 0 480 600" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#2870a0"/>
+          <stop offset="55%" stop-color="#5aace8"/>
+          <stop offset="100%" stop-color="#a8d8f5"/>
+        </linearGradient>
+        <linearGradient id="groundGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#5aaa48"/>
+          <stop offset="100%" stop-color="#2d6028"/>
+        </linearGradient>
+        <linearGradient id="sunGlow" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+          <stop offset="0%" stop-color="#f0c33c" stop-opacity=".35"/>
+          <stop offset="100%" stop-color="#f0c33c" stop-opacity="0"/>
+        </linearGradient>
+        <radialGradient id="sunGlowRad" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#f0c33c" stop-opacity=".3"/>
+          <stop offset="100%" stop-color="#f0c33c" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+
+      <!-- Cielo -->
+      <rect width="480" height="600" fill="url(#skyGrad)"/>
+
+      <!-- Sol — aura difusa -->
+      <circle cx="340" cy="130" r="90" fill="url(#sunGlowRad)"/>
+      <!-- Sol cuerpo -->
+      <circle cx="340" cy="130" r="55" fill="#f0c33c" opacity=".92"/>
+
+      <!-- Rayos de sol -->
+      <g stroke="#f0c33c" stroke-width="2.5" stroke-linecap="round" opacity=".42">
+        <line x1="340" y1="64" x2="340" y2="44"/>
+        <line x1="385" y1="85" x2="400" y2="70"/>
+        <line x1="406" y1="130" x2="428" y2="130"/>
+        <line x1="385" y1="175" x2="400" y2="190"/>
+        <line x1="340" y1="196" x2="340" y2="216"/>
+        <line x1="295" y1="175" x2="280" y2="190"/>
+        <line x1="274" y1="130" x2="252" y2="130"/>
+        <line x1="295" y1="85" x2="280" y2="70"/>
+      </g>
+
+      <!-- Garzas en vuelo — 3 bandadas -->
+      <!-- Bandada 1 -->
+      <path d="M60 105 Q72 97 84 105 Q96 97 108 105" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round"/>
+      <!-- Bandada 2 (más pequeña, más lejos) -->
+      <path d="M170 85 Q179 79 188 85 Q197 79 206 85" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/>
+      <!-- Bandada 3 (muy pequeña) -->
+      <path d="M240 140 Q247 136 254 140 Q261 136 268 140" fill="none" stroke="rgba(255,255,255,.7)" stroke-width="1.8" stroke-linecap="round"/>
+
+      <!-- Nube 1 -->
+      <g opacity=".55">
+        <ellipse cx="110" cy="62" rx="36" ry="14" fill="#fff"/>
+        <ellipse cx="88" cy="66" rx="22" ry="12" fill="#fff"/>
+        <ellipse cx="132" cy="67" rx="20" ry="11" fill="#fff"/>
+      </g>
+      <!-- Nube 2 (más suave) -->
+      <g opacity=".35">
+        <ellipse cx="210" cy="52" rx="30" ry="11" fill="#fff"/>
+        <ellipse cx="192" cy="56" rx="18" ry="9" fill="#fff"/>
+        <ellipse cx="228" cy="55" rx="16" ry="9" fill="#fff"/>
+      </g>
+
+      <!-- Horizonte / sabana -->
+      <path d="M0 370 Q120 355 240 362 Q360 350 480 368 L480 600 L0 600 Z" fill="url(#groundGrad)"/>
+
+      <!-- Caño / río serpenteante -->
+      <path d="M0 385 Q70 375 115 388 Q155 398 195 382 Q235 368 270 380 Q300 390 330 376" fill="none" stroke="#87ceeb" stroke-width="16" stroke-linecap="round" opacity=".48"/>
+
+      <!-- Reflejos del caño -->
+      <path d="M20 387 Q60 380 100 388" fill="none" stroke="#b8e4f8" stroke-width="4" stroke-linecap="round" opacity=".5"/>
+
+      <!-- PALMA MORICHE 1 (izquierda, más baja) -->
+      <g>
+        <!-- Tronco curvado, típico de moriche -->
+        <path d="M78 372 Q80 340 76 310 Q74 280 78 250" fill="none" stroke="#2d4818" stroke-width="14" stroke-linecap="round"/>
+        <!-- Corona de palma -->
+        <path d="M78 252 Q38 210 18 190 Q2 174 22 168 Q46 162 78 252 Z" fill="#3c6820"/>
+        <path d="M78 252 Q118 210 138 190 Q154 174 134 168 Q110 162 78 252 Z" fill="#4a7a28"/>
+        <path d="M78 252 Q48 228 28 236 Q12 242 26 254 Q50 264 78 252 Z" fill="#3c6820"/>
+        <path d="M78 252 Q108 228 126 236 Q142 242 128 254 Q104 264 78 252 Z" fill="#4a7a28"/>
+        <path d="M78 252 Q58 220 38 226 Q18 232 32 248 Q54 256 78 252 Z" fill="#5a8a34"/>
+        <!-- frutos de moriche -->
+        <circle cx="64" cy="264" r="5" fill="#8b4513" opacity=".7"/>
+        <circle cx="72" cy="268" r="4" fill="#8b4513" opacity=".6"/>
+        <circle cx="84" cy="266" r="5" fill="#7a3d10" opacity=".7"/>
+      </g>
+
+      <!-- PALMA MORICHE 2 (derecha, más alta) -->
+      <g>
+        <path d="M368 380 Q372 340 366 295 Q362 255 368 215" fill="none" stroke="#2d4818" stroke-width="16" stroke-linecap="round"/>
+        <!-- Corona derecha -->
+        <path d="M368 217 Q320 164 296 142 Q276 122 300 114 Q328 106 368 217 Z" fill="#3c6820"/>
+        <path d="M368 217 Q416 164 440 142 Q460 122 436 114 Q408 106 368 217 Z" fill="#4a7a28"/>
+        <path d="M368 217 Q334 188 310 196 Q290 204 308 220 Q336 230 368 217 Z" fill="#3c6820"/>
+        <path d="M368 217 Q402 188 424 196 Q444 204 426 220 Q398 230 368 217 Z" fill="#4a7a28"/>
+        <path d="M368 217 Q344 180 318 192 Q296 202 316 218 Q344 228 368 217 Z" fill="#5a8a34"/>
+        <!-- frutos -->
+        <circle cx="352" cy="232" r="6" fill="#8b4513" opacity=".65"/>
+        <circle cx="362" cy="237" r="5" fill="#7a3d10" opacity=".6"/>
+        <circle cx="376" cy="235" r="6" fill="#8b4513" opacity=".65"/>
+      </g>
+
+      <!-- GANADO CRIOLLO 1 (primer plano, más grande) -->
+      <g transform="translate(148 385)" opacity=".92">
+        <!-- Cuerpo -->
+        <ellipse cx="46" cy="24" rx="46" ry="22" fill="#2a4018"/>
+        <!-- Cabeza -->
+        <ellipse cx="88" cy="16" rx="21" ry="16" fill="#2a4018"/>
+        <!-- Hocico -->
+        <ellipse cx="106" cy="20" rx="10" ry="8" fill="#3a5828"/>
+        <!-- Ojo -->
+        <circle cx="94" cy="12" r="2.5" fill="#0a0a0a"/>
+        <!-- Cuernos llaneros (característicos del criollo) -->
+        <path d="M82 7 Q74 -2 64 0" fill="none" stroke="#c8a020" stroke-width="4" stroke-linecap="round"/>
+        <path d="M94 7 Q102 -2 112 0" fill="none" stroke="#c8a020" stroke-width="4" stroke-linecap="round"/>
+        <!-- Patas -->
+        <rect x="14" y="40" width="9" height="26" rx="4" fill="#243818"/>
+        <rect x="28" y="41" width="9" height="25" rx="4" fill="#243818"/>
+        <rect x="52" y="41" width="9" height="25" rx="4" fill="#243818"/>
+        <rect x="66" y="40" width="9" height="26" rx="4" fill="#243818"/>
+        <!-- Cola -->
+        <path d="M2 22 Q-14 10 -16 24" fill="none" stroke="#243818" stroke-width="5.5" stroke-linecap="round"/>
+        <!-- Mancha blanca (ganado criollo tiene manchas) -->
+        <ellipse cx="50" cy="18" rx="14" ry="10" fill="#4a6838" opacity=".4"/>
+      </g>
+
+      <!-- GANADO CRIOLLO 2 (fondo, más pequeño, más a la derecha) -->
+      <g transform="translate(300 400)" opacity=".62">
+        <ellipse cx="32" cy="17" rx="32" ry="15" fill="#2a4018"/>
+        <ellipse cx="62" cy="11" rx="15" ry="11" fill="#2a4018"/>
+        <ellipse cx="74" cy="14" rx="7" ry="6" fill="#3a5828"/>
+        <path d="M58 5 Q52 -1 44 1" fill="none" stroke="#c8a020" stroke-width="3" stroke-linecap="round"/>
+        <path d="M66 5 Q72 -1 80 1" fill="none" stroke="#c8a020" stroke-width="3" stroke-linecap="round"/>
+        <rect x="10" y="28" width="6" height="18" rx="3" fill="#243818"/>
+        <rect x="20" y="29" width="6" height="17" rx="3" fill="#243818"/>
+        <rect x="36" y="29" width="6" height="17" rx="3" fill="#243818"/>
+        <rect x="46" y="28" width="6" height="18" rx="3" fill="#243818"/>
+        <path d="M2 16 Q-10 8 -12 17" fill="none" stroke="#243818" stroke-width="4" stroke-linecap="round"/>
+      </g>
+
+      <!-- Pasto / pastos altos en horizonte -->
+      <g fill="#6ab454" opacity=".6">
+        <path d="M10 372 Q14 358 18 372"/>
+        <path d="M34 366 Q38 352 42 366"/>
+        <path d="M135 360 Q139 346 143 360"/>
+        <path d="M195 357 Q199 343 203 357"/>
+        <path d="M340 360 Q344 346 348 360"/>
+        <path d="M410 364 Q414 350 418 364"/>
+        <path d="M450 368 Q454 354 458 368"/>
+      </g>
+    </svg>
+  </div>
+
+  <!-- TEXTO HERO -->
+  <div class="hero-text">
+    <!-- Decoraciones: sol y palma de fondo -->
+    <span class="deco-icon" aria-hidden="true" style="top:5%;right:4%;width:120px;height:120px;opacity:.12;transform:rotate(12deg);color:var(--gold)">
+      <svg viewBox="0 0 24 24" width="120" height="120" fill="currentColor"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+    </span>
+    <span class="deco-icon" aria-hidden="true" style="bottom:8%;left:3%;width:90px;height:90px;opacity:.13;transform:rotate(-8deg);color:#fff">
+      <!-- palma moriche simplificada -->
+      <svg viewBox="0 0 24 24" width="90" height="90" fill="currentColor"><path d="M12 22V12M12 12C12 8 15 4 20 3c-1 3-4 5-4 9M12 12C12 8 9 4 4 3c1 3 4 5 4 9M12 12C8 10 5 6 5 2c3 1 5 4 7 10M12 12c4-2 7-6 7-10-3 1-5 4-7 10"/></svg>
+    </span>
+    <span class="deco-icon" aria-hidden="true" style="top:45%;right:2%;width:70px;height:70px;opacity:.10;color:#fff">
+      <!-- cabeza de ganado simplificada -->
+      <svg viewBox="0 0 24 24" width="70" height="70" fill="currentColor"><path d="M19 6c0-1.1-.9-2-2-2H7C5.9 4 5 4.9 5 6v4c0 1.86 1.28 3.41 3 3.86V15H7v2h10v-2h-1v-1.14C17.72 13.41 19 11.86 19 10V6zm-7 9c-.55 0-1-.45-1-1v-1h2v1c0 .55-.45 1-1 1zm5-5c0 1.65-1.35 3-3 3h-4c-1.65 0-3-1.35-3-3V6h10v4z"/></svg>
+    </span>
+
+    <div>
+      <p class="hero-eyebrow">Asociación Gremial · Meta, Colombia</p>
+      <h1>La Altillanura en <em>manos criollas</em></h1>
+      <p>Campesinos y campesinas organizados para el desarrollo rural, económico y social de la sabana llanera. Trabajamos con arraigo, solidaridad y visión de futuro.</p>
+      <div style="display:flex; gap:1rem; flex-wrap:wrap; margin-bottom:2rem">
+        <a class="btn btn-gold" href="nosotros.html">Conócenos</a>
+        <a class="btn btn-outline" href="contacto.html">Escríbenos</a>
+      </div>
+      <div class="hero-badges">
+        <span class="hero-badge">📍 Puerto López, Meta</span>
+        <span class="hero-badge">Desde 2021</span>
+        <span class="hero-badge">ESAL S0509226</span>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ═══════════════════════════════════════════
+     QUIÉNES SOMOS
+     ═══════════════════════════════════════════ -->
+<section class="section" id="nosotros-index">
+  <div class="wrap">
+    <div class="about-split">
+      <div class="about-visual">
+        <!-- Composición visual de la identidad llanera -->
+        <svg viewBox="0 0 400 340" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;min-height:280px">
+          <defs>
+            <linearGradient id="aboutBg" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#eaf5e4"/>
+              <stop offset="100%" stop-color="#c8e8c0"/>
+            </linearGradient>
+          </defs>
+          <rect width="400" height="340" fill="url(#aboutBg)"/>
+          <!-- Silueta llano + horizonte -->
+          <path d="M0 220 Q100 210 200 218 Q300 208 400 222 L400 340 L0 340 Z" fill="#4a8a3c" opacity=".3"/>
+          <!-- Sol dorado -->
+          <circle cx="300" cy="80" r="42" fill="#e8b82a" opacity=".7"/>
+          <circle cx="300" cy="80" r="62" fill="#e8b82a" opacity=".12"/>
+          <!-- Palma estilizada -->
+          <rect x="158" y="130" width="10" height="100" rx="4" fill="#2d6028" opacity=".8"/>
+          <path d="M163 132 Q135 108 120 96 Q108 86 120 80 Q138 74 163 132Z" fill="#4a8a3c" opacity=".7"/>
+          <path d="M163 132 Q191 108 206 96 Q218 86 206 80 Q188 74 163 132Z" fill="#3a7a30" opacity=".7"/>
+          <path d="M163 132 Q142 116 126 122 Q114 128 124 138 Q144 144 163 132Z" fill="#5a9a40" opacity=".6"/>
+          <path d="M163 132 Q184 116 198 122 Q210 128 200 138 Q180 144 163 132Z" fill="#4a8a3c" opacity=".6"/>
+          <!-- Ganado pequeño decorativo -->
+          <g transform="translate(80 230)" opacity=".6">
+            <ellipse cx="28" cy="16" rx="28" ry="14" fill="#2d6028"/>
+            <ellipse cx="54" cy="10" rx="14" ry="10" fill="#2d6028"/>
+            <path d="M50 4 Q44 -1 36 1" fill="none" stroke="#e8b82a" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M58 4 Q64 -1 72 1" fill="none" stroke="#e8b82a" stroke-width="2.5" stroke-linecap="round"/>
+            <rect x="8" y="26" width="5" height="14" rx="2" fill="#2d4818"/>
+            <rect x="16" y="27" width="5" height="13" rx="2" fill="#2d4818"/>
+            <rect x="30" y="27" width="5" height="13" rx="2" fill="#2d4818"/>
+            <rect x="38" y="26" width="5" height="14" rx="2" fill="#2d4818"/>
+          </g>
+          <!-- Etiqueta -->
+          <rect x="20" y="18" width="160" height="42" rx="8" fill="white" opacity=".8"/>
+          <text x="34" y="40" font-family="Outfit, sans-serif" font-size="11" font-weight="800" fill="#2d6028" letter-spacing="1">ALTILLANURA</text>
+          <text x="34" y="54" font-family="Inter, sans-serif" font-size="9" fill="#5a6050">Puerto López · Meta</text>
+        </svg>
+      </div>
+      <div class="about-text reveal">
+        <p class="sec-label">Nuestra historia</p>
+        <h2 class="sec-title">Quiénes somos</h2>
+        <p>ASOCROALTI es una asociación gremial conformada por campesinos y campesinas criollos de la Altillanura colombiana. Nacimos en septiembre de 2021 con el propósito de articular a los productores rurales del municipio de Puerto López, en el Meta, y fortalecer sus capacidades económicas, sociales y tecnológicas.</p>
+        <p>Trabajamos con especial atención a las poblaciones más vulnerables: personas desplazadas, jóvenes, mujeres cabeza de hogar y comunidades indígenas de la región, promoviendo el arraigo y la dignidad campesina.</p>
+        <div class="about-datos">
+          <div class="about-dato">
+            <strong>Constitución</strong>
+            <span>Septiembre 2021</span>
+          </div>
+          <div class="about-dato">
+            <strong>NIT</strong>
+            <span>901.526.395-0</span>
+          </div>
+          <div class="about-dato">
+            <strong>ESAL</strong>
+            <span>S0509226</span>
+          </div>
+          <div class="about-dato">
+            <strong>Territorio</strong>
+            <span>Meta · Altillanura</span>
+          </div>
+        </div>
+        <div style="margin-top:1.8rem">
+          <a class="btn btn-green" href="nosotros.html">Ver más sobre nosotros</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     TERRITORIO — sección única de ASOCROALTI
+     ═══════════════════════════════════════════ -->
+<section class="section section-green" id="territorio">
+  <div class="wrap">
+    <div class="reveal" style="text-align:center; margin-bottom:2.8rem">
+      <p class="sec-label" style="justify-content:center">Identidad y arraigo</p>
+      <h2 class="sec-title" style="color:#fff">La Altillanura, nuestro territorio</h2>
+      <p style="color:rgba(255,255,255,.75); max-width:600px; margin:0 auto; font-size:1.04rem; line-height:1.7">La sabana llanera nos define. Trabajamos por su gente, su ganado criollo y sus comunidades.</p>
+    </div>
+    <div class="territorio-wrap reveal">
+      <div class="territorio-text">
+        <p>La Altillanura colombiana, en el corazón del departamento del Meta, es una de las zonas de mayor diversidad ecológica y cultural del país. Sus sabanas inmensas, morichales, caños y comunidades campesinas forman un tejido de vida que ASOCROALTI trabaja por proteger y fortalecer.</p>
+        <p>Nuestros asociados son herederos de la tradición llanera: criadores de ganado criollo, agricultores de sabana y guardianes de las prácticas culturales que hacen única a la Orinoquia colombiana.</p>
+        <div class="territorio-tags">
+          <span class="territorio-tag">🐄 Ganado criollo</span>
+          <span class="territorio-tag">🌿 Morichales</span>
+          <span class="territorio-tag">🏞️ Sabana llanera</span>
+          <span class="territorio-tag">💧 Caños y ríos</span>
+          <span class="territorio-tag">☀️ Llano abierto</span>
+        </div>
+      </div>
+      <div class="territorio-cards">
+        <div class="territorio-card">
+          <div class="territorio-card-icon">
+            <svg viewBox="0 0 24 24" width="24" height="24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          </div>
+          <h4>Puerto López</h4>
+          <p>Nuestro municipio, puerta de entrada a la Orinoquía y epicentro de la vida llanera del Meta.</p>
+        </div>
+        <div class="territorio-card">
+          <div class="territorio-card-icon">
+            <svg viewBox="0 0 24 24" width="24" height="24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+          </div>
+          <h4>Comunidades</h4>
+          <p>Familias campesinas, mujeres cabeza de hogar, jóvenes y comunidades indígenas del Llano.</p>
+        </div>
+        <div class="territorio-card">
+          <div class="territorio-card-icon">
+            <svg viewBox="0 0 24 24" width="24" height="24"><path d="M17 8C8 10 5.9 16.17 3.82 19.32L5.71 21l1-1C10 18 19 17 22 9c-1.54 1.27-2.58 1.5-4 1C18 7 18.5 6.22 17 8z"/></svg>
+          </div>
+          <h4>Producción criolla</h4>
+          <p>Rescatamos las razas bovinas criollas colombianas y las prácticas ganaderas tradicionales del Llano.</p>
+        </div>
+        <div class="territorio-card">
+          <div class="territorio-card-icon">
+            <svg viewBox="0 0 24 24" width="24" height="24"><path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6L23 9 12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/></svg>
+          </div>
+          <h4>Formación gremial</h4>
+          <p>Capacitación técnica, acceso a mercados y fortalecimiento organizativo para nuestros asociados.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     LÍNEAS DE ACCIÓN
+     ═══════════════════════════════════════════ -->
+<section class="section section-cream" id="lineas">
+  <div class="wrap">
+    <div class="reveal" style="text-align:center; margin-bottom:.5rem">
+      <p class="sec-label" style="justify-content:center">Lo que hacemos</p>
+      <h2 class="sec-title">Líneas de acción</h2>
+    </div>
+    <div class="lineas-grid reveal">
+
+      <div class="linea-card">
+        <div class="linea-card-icon">
+          <svg viewBox="0 0 24 24" width="26" height="26"><path d="M11.5 2C6.81 2 3 5.81 3 10.5S6.81 19 11.5 19h.5v3c4.86-2.34 8-7 8-11.5C20 5.81 16.19 2 11.5 2zm1 14.5h-2v-2h2v2zm0-4h-2c0-3.25 3-3 3-5 0-1.1-.9-2-2-2s-2 .9-2 2h-2c0-2.21 1.79-4 4-4s4 1.79 4 4c0 2.5-3 2.75-3 5z"/></svg>
+        </div>
+        <h3>Desarrollo rural y gremial</h3>
+        <p>Articulamos a los campesinos criollos de la Altillanura para acceder de manera colectiva a programas, recursos y servicios del Estado. Gestionamos proyectos de fomento productivo, asistencia técnica y acceso a mercados para fortalecer la economía campesina.</p>
+      </div>
+
+      <div class="linea-card">
+        <div class="linea-card-icon">
+          <svg viewBox="0 0 24 24" width="26" height="26"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2z"/></svg>
+        </div>
+        <h3>Bienestar social y poblaciones vulnerables</h3>
+        <p>Promovemos el bienestar de las familias campesinas con especial atención a personas en situación de desplazamiento, mujeres cabeza de hogar, jóvenes y comunidades indígenas. Trabajamos por la inclusión, la equidad y la dignidad de vida en el territorio llanero.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     GALERÍA
+     ═══════════════════════════════════════════ -->
+<section class="section" id="galeria">
+  <div class="wrap">
+    <div class="reveal" style="text-align:center; margin-bottom:.5rem">
+      <p class="sec-label" style="justify-content:center">Nuestra tierra</p>
+      <h2 class="sec-title">Galería</h2>
+      <p style="color:var(--gray); max-width:500px; margin:0 auto; margin-top:.5rem; font-size:.96rem">Imágenes de la Altillanura, nuestra gente y nuestro trabajo.</p>
+    </div>
+    <div class="gallery-grid reveal">
+      <div class="gal-item gal-1">
+        <div class="gal-placeholder">
+          <svg viewBox="0 0 24 24" width="48" height="48"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+        </div>
+        <div class="gal-overlay"><span>Territorio llanero</span></div>
+        <!--
+          Reemplazar por <img src="assets/img/galeria-1.jpg" alt="Territorio llanero" loading="lazy">
+        -->
+      </div>
+      <div class="gal-item gal-2">
+        <div class="gal-placeholder">
+          <svg viewBox="0 0 24 24" width="48" height="48"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+        </div>
+        <div class="gal-overlay"><span>Familias asociadas</span></div>
+        <!--
+          Reemplazar por <img src="assets/img/galeria-2.jpg" alt="Familias asociadas" loading="lazy">
+        -->
+      </div>
+      <div class="gal-item gal-3">
+        <div class="gal-placeholder">
+          <svg viewBox="0 0 24 24" width="48" height="48"><path d="M17 8C8 10 5.9 16.17 3.82 19.32L5.71 21l1-1C10 18 19 17 22 9c-1.54 1.27-2.58 1.5-4 1C18 7 18.5 6.22 17 8z"/></svg>
+        </div>
+        <div class="gal-overlay"><span>Ganado criollo</span></div>
+        <!--
+          Reemplazar por <img src="assets/img/galeria-3.jpg" alt="Ganado criollo" loading="lazy">
+        -->
+      </div>
+      <div class="gal-item gal-4">
+        <div class="gal-placeholder">
+          <svg viewBox="0 0 24 24" width="48" height="48"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2z"/></svg>
+        </div>
+        <div class="gal-overlay"><span>Actividades gremiales</span></div>
+        <!--
+          Reemplazar por <img src="assets/img/galeria-4.jpg" alt="Actividades gremiales" loading="lazy">
+        -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     CTA
+     ═══════════════════════════════════════════ -->
+<section class="cta-band">
+  <!-- Decoraciones CTA: sol + ganado en fondo -->
+  <span class="deco-icon" aria-hidden="true" style="top:-10px;left:4%;width:130px;height:130px;opacity:.12;color:#fff">
+    <svg viewBox="0 0 24 24" width="130" height="130" fill="currentColor"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+  </span>
+  <span class="deco-icon" aria-hidden="true" style="bottom:-5px;right:5%;width:120px;height:120px;opacity:.11;transform:scaleX(-1);color:#fff">
+    <svg viewBox="0 0 24 24" width="120" height="120" fill="currentColor"><path d="M19 6c0-1.1-.9-2-2-2H7C5.9 4 5 4.9 5 6v4c0 1.86 1.28 3.41 3 3.86V15H7v2h10v-2h-1v-1.14C17.72 13.41 19 11.86 19 10V6zm-7 9c-.55 0-1-.45-1-1v-1h2v1c0 .55-.45 1-1 1zm5-5c0 1.65-1.35 3-3 3h-4c-1.65 0-3-1.35-3-3V6h10v4z"/></svg>
+  </span>
+  <div class="wrap" style="position:relative;z-index:1">
+    <div class="reveal">
+      <h2>Únete a ASOCROALTI</h2>
+      <p>Si eres campesino o campesina de la Altillanura y quieres hacer parte de nuestra asociación, escríbenos. Juntos somos más fuertes.</p>
+      <div class="cta-actions">
+        <a class="btn btn-gold" href="contacto.html">Contáctanos</a>
+        <a class="btn btn-outline" href="nosotros.html">Nuestra historia</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="objeto-strip">
+  <div class="wrap">
+    <p>ASOCROALTI — Asociación Gremial de Campesinos Criollos Altillanura. NIT 901.526.395-0 · Vda. Chaviva – Melua, Puerto López, Meta.</p>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="foot-top">
+    <div class="wrap">
+      <div class="foot-grid">
+        <div class="foot-brand">
+          <img src="assets/img/logo-asocroalti.png" alt="ASOCROALTI">
+          <p>Asociación gremial sin ánimo de lucro que trabaja por el desarrollo rural, económico y social de los campesinos criollos de la Altillanura colombiana.</p>
+        </div>
+        <div class="foot-col">
+          <h4>Navegación</h4>
+          <a href="index.html">Inicio</a>
+          <a href="#territorio">Territorio</a>
+          <a href="nosotros.html">Nosotros</a>
+          <a href="documentos.html">Documentos ESAL</a>
+          <a href="contacto.html">Contacto</a>
+        </div>
+        <div class="foot-col">
+          <h4>Contacto</h4>
+          <p>Vda. Chaviva – Melua<br>Puerto López, Meta</p>
+          <a href="tel:+573132237998" style="margin-top:.4rem">313 223 7998</a>
+          <a href="tel:+573118412743" style="margin-top:.2rem">311 841 2743</a>
+          <a href="mailto:asocrioaltipuertolopez@gmail.com" style="margin-top:.3rem">asocrioaltipuertolopez@gmail.com</a>
+          <p style="margin-top:.5rem">NIT: 901.526.395-0</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <div class="wrap">
+      © <span id="year"></span> ASOCROALTI · Asociación Gremial de Campesinos Criollos Altillanura · NIT 901.526.395-0 — Todos los derechos reservados.
+    </div>
+  </div>
+</footer>
+
+<a class="float-wa" href="https://api.whatsapp.com/send?phone=573132237998&text=Hola%20ASOCROALTI" target="_blank" rel="noopener">
+  <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.9 5-1.3A10 10 0 1 0 12 2z"/></svg>
+  Contáctanos
+</a>
+
+<script src="main.js"></script>
+</body>
+</html>
